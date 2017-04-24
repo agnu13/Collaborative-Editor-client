@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="85.0" prefWidth="468.0" styleClass="root-parent" stylesheets="@../css/notification.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.MyNotiController">
+   <children>
+      <Label fx:id="title" layoutX="23.0" layoutY="13.0" prefHeight="28.0" prefWidth="406.0" styleClass="title" text="DropBox">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="content" layoutX="23.0" layoutY="45.0" prefHeight="17.0" prefWidth="422.0" styleClass="content" text="4 files updated in your folder" />
+      <Label layoutX="442.0" layoutY="1.0" onMouseClicked="#closeClicked" prefHeight="28.0" prefWidth="22.0" styleClass="cross" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="1.0" />
+   </children>
+</AnchorPane>

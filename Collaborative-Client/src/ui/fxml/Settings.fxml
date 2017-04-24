@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="310.0" stylesheets="@../css/hamburgermenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.SettingsController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="20.0" prefHeight="590.0" prefWidth="310.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="back" alignment="CENTER" layoutX="23.0" layoutY="7.0" onMouseClicked="#backClicked" prefHeight="35.0" prefWidth="35.0" text="&lt;" textFill="#8d8d8d" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="32.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="35.0" prefHeight="35.0" prefWidth="155.0" styleClass="title" text="Settings" textFill="#a6a3ae" />
+            <AnchorPane fx:id="contentParent" layoutY="76.0" styleClass="content-notif" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="305.0">
+                           <children>
+                              <Label layoutY="33.0" text="Show new notification popup" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+                                 <styleClass>
+                                    <String fx:value="settings-label" />
+                                    <String fx:value="profile-label2" />
+                                 </styleClass></Label>
+                              <Label layoutY="93.0" text="Play sound on new notifications" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0">
+                                 <styleClass>
+                                    <String fx:value="settings-label" />
+                                    <String fx:value="profile-label2" />
+                                 </styleClass></Label>
+                              <Label layoutY="153.0" text="Show cursor names in text editor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="153.0">
+                                 <styleClass>
+                                    <String fx:value="settings-label" />
+                                    <String fx:value="profile-label2" />
+                                 </styleClass></Label>
+                              <Label layoutY="213.0" text="Show Hamburger menu on startup" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="213.0">
+                                 <styleClass>
+                                    <String fx:value="settings-label" />
+                                    <String fx:value="profile-label2" />
+                                 </styleClass></Label>
+                              <AnchorPane fx:id="toggleParent1" layoutX="241.0" layoutY="39.0" prefHeight="15.0" prefWidth="50.0" AnchorPane.rightAnchor="14.0" />
+                              <AnchorPane fx:id="toggleParent2" layoutX="241.0" layoutY="99.0" prefHeight="15.0" prefWidth="50.0" AnchorPane.rightAnchor="14.0" />
+                              <AnchorPane fx:id="toggleParent3" layoutX="241.0" layoutY="159.0" prefHeight="15.0" prefWidth="50.0" AnchorPane.rightAnchor="14.0" />
+                              <AnchorPane fx:id="toggleParent4" layoutX="241.0" layoutY="219.0" prefHeight="15.0" prefWidth="50.0" AnchorPane.rightAnchor="14.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

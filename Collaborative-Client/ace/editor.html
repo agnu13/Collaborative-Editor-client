@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Editor</title>
+  <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+
+    #editor {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+	.MyCursorClass {
+		position: absolute;
+		border: 1px solid red;
+		border-radius: 0;
+	}
+	
+	.bar {
+		position:absolute;
+		background: #7DC4E8;
+		z-index:40; 
+		width:3px!important;
+		opacity: 1; !important;
+	}
+	.bar::before{
+		position:absolute;
+		color: white;
+		background: #7DC4E8;
+		z-index:999;
+		top: -20px; 
+		content :"Ashish"; 
+		left:0px; 
+		font-family: Arial; 
+		padding:5px 10px 5px 10px;
+		opacity: 1; !important;
+	}
+	
+	.bar2 {
+		position:absolute;
+		background: #81A480;
+		z-index:40; 
+		width:3px!important;
+		opacity: 1; !important;
+	}
+	.bar2::before{
+		position:absolute;
+		color: white;
+		background: #81A480;
+		z-index:999;
+		top: -20px; 
+		content :"Swapnil"; 
+		left:0px; 
+		font-family: Arial; 
+		padding:5px 10px 5px 10px;
+		opacity: 1; !important;
+		box-shadow: 1px 1px 5px #888888;
+	}
+  </style>
+</head>
+<body>
+<pre id="editor"></pre>
+
+<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="src-noconflict/ext-language_tools.js"></script>
+
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/lazy");
+    editor.getSession().setMode("ace/mode/c_cpp");
+	editor.setScrollSpeed(0.05);
+	
+	token = {
+		type: "paren.rparen",
+		value: "}",
+		index: 0,
+		start: 0
+	} 
+	
+	function pasteContent(content){
+		editor.onPaste(content);
+	}
+	
+	var api = false;
+	
+	editor.on('change', function(e) {
+		if (api == true) {
+			return;
+		}
+		
+		var pos = e.start;
+		var row = pos.row;
+		
+		var start = editor.session.doc.positionToIndex(e.start);
+		var end = editor.session.doc.positionToIndex(e.end);
+		
+		//javaObject.print(JSON.stringify(e));
+		javaObject.notifyTextChange(JSON.stringify(e), start, end);
+	});
+	
+	function decode(content) {
+		var delimeter = (String.fromCharCode(127));
+		var array = content.split(delimeter);
+		var str = "";
+		for (var i = 0; i < array.length; i++) {
+			var code = parseInt(array[i]);
+			
+			if (code == 10) {
+				str += "\n";
+			} else if (code == 9) {
+				str += "\t";
+			} else {
+				str += String.fromCharCode(code);
+			}
+		}
+		
+		return str;
+	}
+	
+	function setReadOnly() {
+		editor.setReadOnly(true);
+	}
+	
+	function unsetReadOnly() {
+		editor.setReadOnly(false);
+	}
+	
+	
+	
+	function insert(index, content) {
+		api = true;
+		
+		var str = decode(content);
+		
+		var pos = editor.session.doc.indexToPosition(index);
+		editor.session.insert(pos, str);
+		
+		api = false;
+	}
+	
+	function pasteContent(content) { 
+		var i = 0;
+		var str = decode(content);
+		
+		editor.onPaste(str);
+	}
+	
+	ace.require("ace/ext/language_tools");
+	editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: false
+    });
+	editor.commands.on("afterExec", function(e){
+		 if (e.command.name == "insertstring"&&/^[\w.]$/.test(e.args)) {
+			 editor.execCommand("startAutocomplete")
+		 }
+	})
+	
+	function erase(index) {
+		api = true;
+		
+		var pos = editor.session.doc.indexToPosition(index);
+		var pos2 = editor.session.doc.indexToPosition(index + 1);
+		
+		var Range = ace.require('ace/range').Range
+		var range = new Range(pos.row, pos.column, pos2.row, pos2.column);
+		
+		editor.session.remove(range);
+		
+		api = false;
+	}
+	
+	function getText() {
+		return editor.getSession().getValue();
+	}
+	
+	function setText(txt) {
+		editor.getSession().setValue(decode(txt));
+	}
+	
+	var Range = ace.require('ace/range').Range;
+	//var range = new Range(2, 5, 2, 6);
+	
+	//var marker = editor.session.addMarker(range, 'bar', "text", true);
+	//var marker2 = editor.session.addMarker(new Range(4, 20, 4, 21), 'bar2', "text", true);
+	
+	//editor.session.removeMarker(marker);
+	
+	/*var pos1 = 1;
+	setInterval(function(){ 
+		var p1 = editor.session.doc.indexToPosition(pos1);
+		var p2 = editor.session.doc.indexToPosition(pos1 + 1);
+		
+		editor.session.removeMarker(marker);
+		marker = editor.session.addMarker(new Range(p1.row, p1.column, p2.row, p2.column), 'bar', "text", true);
+		pos1++;
+		//alert("As " + p1);
+	}, 500);*/
+	
+	/*var marker, marker2;
+	
+	
+	
+
+	function addMarkers() {
+		marker = editor.session.addMarker(range, 'bar', "text", true);
+		marker2 = editor.session.addMarker(new Range(4, 20, 4, 21), 'bar2', "text", true);
+	}
+	
+	function removeAllMarkers() {
+		editor.session.removeMarker(marker);
+		editor.session.removeMarker(marker2);
+	}
+	
+	addMarkers();*/
+	
+	function hideAllMarkers() {
+		for (var mmr in editor.session.getMarkers(true)) {
+			editor.session.removeMarker(mmr);
+		}
+	}
+	
+	function addMarker(name, color, pos) {
+		var style = document.createElement('style');
+		style.type = 'text/css';
+		style.innerHTML = ".bar" + name + " {\n" +
+			"		position:absolute;\n" +
+			"		background: " + color +";\n" +
+			"		z-index:40; \n" +
+			"		width:3px!important;\n" +
+			"		opacity: 1; !important;\n" +
+			"	}\n" +
+			"	.bar" + name + "::before{\n" +
+			"		position:absolute;\n" +
+			"		color: white;\n" +
+			"		background: " + color +";\n" +
+			"		z-index:999;\n" +
+			"		top: -20px; \n" +
+			"		content :\"" + name + "\"; \n" +
+			"		left:0px; \n" +
+			"		font-family: Arial; \n" +
+			"		padding:5px 10px 5px 10px;\n" +
+			"		opacity: 1; !important;\n" +
+			"		box-shadow: 1px 1px 5px #888888;\n" +
+			"	}";
+		document.getElementsByTagName('head')[0].appendChild(style);
+		
+		var p1 = editor.session.doc.indexToPosition(pos);
+		var p2 = editor.session.doc.indexToPosition(pos + 1);
+		
+		//alert(JSON.stringify(p1) + " " + JSON.stringify(p2));
+		if (p1.row < p2.row) {
+			p2.column = p1.column + 1;
+			p2.row = p1.row;
+		}
+		
+		if (p1.row == p2.row && p1.column == p2.column) {
+			p2.column = p1.column + 1;
+			p2.row = p1.row;
+		}
+		
+		if (false && p1.row < p2.row) {
+			editor.session.addMarker(new Range(p1.row, p1.column, p1.row, p1.column), 'bar' + name, "text", true);
+		} else {
+			editor.session.addMarker(new Range(p1.row, p1.column, p2.row, p2.column), 'bar' + name, "text", true);
+		}
+	}
+	
+	function getCursorPosition() {
+		var position = editor.getCursorPosition();
+		var index = editor.session.doc.positionToIndex(position);
+		return JSON.stringify(index);
+	}
+	
+	function getCopyString() {
+		return editor.getCopyText();
+	}
+</script>
+
+</body>
+</html>

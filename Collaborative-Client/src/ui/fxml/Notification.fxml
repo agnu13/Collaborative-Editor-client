@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="310.0" stylesheets="@../css/hamburgermenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.NotificationController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="590.0" prefWidth="310.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="back" alignment="CENTER" layoutX="23.0" layoutY="7.0" onMouseClicked="#backClicked" prefHeight="35.0" prefWidth="35.0" text="&lt;" textFill="#8d8d8d" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="32.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="35.0" prefHeight="35.0" prefWidth="155.0" styleClass="title" text="Notifications" textFill="#a6a3ae" />
+            <AnchorPane layoutY="76.0" styleClass="content-notif" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
+               <children>
+                  <AnchorPane layoutY="105.0" prefHeight="314.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="283.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <VBox fx:id="notificationsParent" prefWidth="300.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutY="151.0" prefHeight="40.0" prefWidth="310.0" styleClass="recent-lbl" text="Projects recently shared with you" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                  <Label layoutX="268.0" layoutY="24.0" onMouseClicked="#clearAllClicked" styleClass="clear-all" text="Clear All" AnchorPane.rightAnchor="15.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label text="Label" />
+   </children>
+</AnchorPane>

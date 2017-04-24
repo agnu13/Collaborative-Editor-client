@@ -1,0 +1,261 @@
+@font-face {
+    font-family: SegoeUI;
+    src: url('fonts/segoeui.ttf');
+}
+
+.scroll-pane {
+    -fx-background-color:transparent;
+    -fx-background-insets:0,0,0, 0;
+    -fx-padding:0;
+    -fx-border-width:0
+}
+
+.scroll-pane>.viewport {
+    -fx-background-color:transparent;
+    -fx-background-insets:0,0,0, 0;
+}
+
+.scroll-pane:focused {
+    -fx-border-width:0;
+    -fx-background-color:transparent;
+    -fx-background-insets:0,0,0, 0
+}
+
+.scroll-pane>*>.scroll-bar:horizontal {
+    -fx-background-insets:0,0 0 0 0;
+    -fx-padding:.0 .0 .0 .0
+}
+
+.scroll-pane>*>.scroll-bar:vertical {
+    -fx-background-insets:0,0 0 0 0;
+    -fx-padding:.0 .0 .0 .0
+}
+
+.scroll-pane>.corner {
+    -fx-background-color:-fx-box-border,-fx-base;
+    -fx-background-insets:0,0 0 0 0
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-scale-x: 0.8;
+    -fx-opacity: 0.8;
+}
+
+.scroll-bar:vertical:hover {
+    -fx-opacity: 1;
+}
+
+.scroll-bar:vertical .track-background {
+    visibility: hidden;
+}
+
+.scroll-bar:vertical .track {
+    visibility: hidden;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #919191;
+    -fx-background-radius: 6;
+}
+
+.title {
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 16;
+}
+
+.mainFxmlClass {
+    //-fx-background-color: #333333;
+    -fx-background-color: #292933;
+}
+
+.hamburger2 {
+    -fx-background-image:url("images/cross.png");
+    -fx-background-position:center center;
+    -fx-background-repeat:no-repeat;
+    -fx-opacity: 0.6;
+}
+
+.content-notif {
+    -fx-background-color: #41424E;
+    -fx-border-color: #0087FF;
+    -fx-border-width: 2 0 0 0;
+}
+
+.content {
+    -fx-background-color: #31323D;
+    //-fx-background-color: #41424E;
+    -fx-border-color: #0087FF;
+    -fx-border-width: 2 0 0 0;
+}
+
+
+
+.project-back {
+    //-fx-background-color: #202020;
+    //-fx-border-color: #666666;
+    //-fx-border-width: 1 0 1 0;
+}
+
+
+.text-field {
+    -fx-border-radius: 0 0 0 0;
+    //-fx-border-color: #999999;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0, 0, 0;
+    -fx-text-fill: derive(-fx-control-inner-background,-20%);;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-40%);//rgb(160, 160, 160);
+    -fx-cursor: text;
+}
+
+.txt {
+    -fx-padding: 5 5 5 20;
+}
+
+.ham-label {
+    -fx-background-image:url("images/icons-sprite-nav.png");
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 13;
+    -fx-background-repeat:no-repeat;
+    -fx-padding: 5 5 5 60;
+    -fx-text-fill: #F8F8F9;
+}
+
+.ham-label:hover {
+    -fx-background-image:url("images/icons-sprite-nav-orange.png");
+    -fx-background-color: rgba(200, 200, 255, 0.1);
+}
+
+.arrow {
+    -fx-background-position: 10 -880;
+}
+
+.notif-lbl {
+    -fx-background-position: 10 -336;
+}
+.project-lbl {
+    -fx-background-position: 10 -36;
+}
+.user-lbl {
+    -fx-background-position: 10 -436;
+}
+.settings-lbl {
+    -fx-background-position: 10 -236;
+}
+.recent-lbl {
+    -fx-font-family: 'SegoeUI';
+    -fx-text-fill: derive(-fx-control-inner-background,-40%);
+    -fx-padding: 5 5 5 20;
+}
+
+.settings-label {
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 12;
+    -fx-padding: 5 20 5 20;
+    -fx-text-fill: white;
+}
+
+.profile-label {
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 12;
+    -fx-padding: 5 30 5 30;
+    -fx-text-fill: white;
+}
+
+.profile-label2 {
+    -fx-text-fill: derive(white, -20%);
+}
+
+.recent-project-label {
+    -fx-background-image:url("images/project.png");
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 12;
+    -fx-background-position: 15 center;
+    -fx-background-repeat:no-repeat;
+    -fx-padding: 10 5 10 50;
+    -fx-text-fill: derive(white, -10%);
+}
+
+.recent-project-label:hover {
+    -fx-background-image:url("images/project-orange.png");
+    -fx-text-fill: white;
+    //-fx-background-color: rgba(200, 200, 255, 0.1);
+}
+
+.shared-by {
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 12;
+    -fx-text-fill: derive(white, -40%);
+    -fx-padding: 10 5 10 15;
+}
+
+.clear-all {
+    -fx-text-fill: derive(white, -20%);
+}
+
+.clear-all:hover {
+    -fx-text-fill: derive(white, -10%);
+    -fx-underline: true;
+}
+
+.project-toggle {
+    -fx-font-family: 'SegoeUI';
+    -fx-font-size: 13;
+    -fx-background-color: #292933;
+    -fx-background-radius: 0;
+    -fx-text-fill: derive(white, -30%);
+}
+
+.project-toggle:hover {
+    -fx-text-fill: derive(white, -20%);
+    -fx-background-color: derive(#292933, 10%);
+}
+
+.project-toggle:selected {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-text-fill: derive(white, -10%);// derive(#0087FF, 50%);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 2, 0, 0, 0);
+    //-fx-shape: "M 0,0 L 0,300 L 210,300 L 250,350 L 290,300 L 500,300 L 500,0 L 0,0";
+}
+
+.recent-lbl2 {
+    -fx-font-family: 'SegoeUI';
+    -fx-text-fill: derive(-fx-control-inner-background,-40%);
+    -fx-padding: 5 5 5 40;
+}
+
+
+.share-btn {
+    -fx-background-image:url("images/Share-129.png");
+    -fx-background-position:30 center;
+    -fx-background-repeat:no-repeat;
+    -fx-font-family: "SegoeUI";
+    -fx-font-size: 15;
+    -fx-background-color: #3998D6;
+    -fx-text-fill: white;
+    -fx-background-radius: 3;
+}
+
+
+.text-field2 {
+    -fx-font-family: "SegoeUI";
+    -fx-font-size: 14;
+    -fx-border-radius: 0 0 0 0;
+    //-fx-border-color: #999999;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0, 0, 0;
+    -fx-text-fill: derive(-fx-control-inner-background,-20%);;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-40%);//rgb(160, 160, 160);
+    -fx-cursor: text;
+}
+
+.share-btn:hover {
+    -fx-opacity: 0.9;
+}
+
+.share-btn:pressed {
+    -fx-background-color: derive(#3998D6, -10%);
+}

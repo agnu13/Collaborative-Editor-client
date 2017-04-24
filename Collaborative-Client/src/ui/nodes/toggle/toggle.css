@@ -1,0 +1,15 @@
+.background {
+    -fx-background-color : #2196F3;
+}
+
+.background-off {
+    -fx-background-color : #31323D;//#A6A9A9;
+    -fx-background-radius: 10.5;
+    //-fx-border-color: red;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 0);
+}
+
+.toggle-handle {
+    //-fx-background-color: red;
+    -fx-fill: #F3F3F3;
+}

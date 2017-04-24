@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="598.0" prefWidth="310.0" stylesheets="@../css/hamburgermenu.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ui.controllers.VersionsController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="30.0" layoutY="30.0" prefHeight="590.0" prefWidth="310.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="30.0" layoutY="35.0" prefHeight="35.0" prefWidth="155.0" styleClass="title" text="Versions" textFill="#a6a3ae" />
+            <AnchorPane layoutY="76.0" styleClass="content-notif" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="283.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                     <content>
+                        <VBox fx:id="versionsParent" prefWidth="300.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="10.0" layoutY="161.0" prefHeight="40.0" prefWidth="310.0" styleClass="recent-lbl" text="Select a Version to restore" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

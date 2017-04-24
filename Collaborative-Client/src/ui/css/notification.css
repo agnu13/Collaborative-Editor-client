@@ -1,0 +1,32 @@
+@font-face {
+    font-family: SegoeUI;
+    src: url('fonts/segoeui.ttf');
+}
+
+.root-parent {
+    -fx-background-radius: 5;
+    -fx-background-color: #403D36;
+}
+
+.title {
+    //-fx-font-smoothing-type: gray;
+    //-fx-font-family: "SegoeUI";
+    //-fx-font-size: 16;
+    -fx-text-fill: rgb(230, 230, 230);
+}
+
+.content {
+    -fx-text-fill: rgb(180, 180, 180);
+}
+
+.cross {
+    -fx-shape: "M 0,0 H1 L 4,3 7,0 H8 V1 L 5,4 8,7 V8 H7 L 4,5 1,8 H0 V7 L 3,4 0,1 Z";
+    -fx-text-fill: white;
+    -fx-background-color: white;
+    -fx-scale-shape: false;
+    -fx-opacity: 0.7;
+}
+
+.cross:hover {
+    -fx-opacity: 0.9;
+}

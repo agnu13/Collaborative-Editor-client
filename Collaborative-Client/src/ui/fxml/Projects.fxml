@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="310.0" stylesheets="@../css/hamburgermenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.ProjectsController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="30.0" layoutY="30.0" prefHeight="590.0" prefWidth="310.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="back" alignment="CENTER" layoutX="23.0" layoutY="7.0" onMouseClicked="#backClicked" prefHeight="35.0" prefWidth="35.0" text="&lt;" textFill="#8d8d8d" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="32.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="35.0" prefHeight="35.0" prefWidth="155.0" styleClass="title" text="Projects" textFill="#a6a3ae" />
+            <AnchorPane layoutY="76.0" styleClass="content-notif" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
+               <children>
+                  <GridPane layoutX="48.0" layoutY="6.0" prefHeight="51.0" prefWidth="310.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ToggleButton fx:id="tb1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" selected="true" styleClass="project-toggle" text="My Projects" />
+                        <ToggleButton fx:id="tb2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="55.0" prefWidth="145.0" styleClass="project-toggle" text="Shared Projects" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <AnchorPane fx:id="projectsPane" layoutY="63.0" prefHeight="406.0" prefWidth="310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="283.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                           <content>
+                              <VBox fx:id="projectsParent" prefWidth="300.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="10.0" layoutY="161.0" prefHeight="40.0" prefWidth="310.0" styleClass="recent-lbl2" text="Projects created by me" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="sharedPane" layoutX="23.0" layoutY="76.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="283.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                           <content>
+                              <VBox fx:id="sharedParent" prefWidth="300.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="20.0" layoutY="171.0" prefHeight="40.0" prefWidth="310.0" styleClass="recent-lbl2" text="Projects shared by others" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

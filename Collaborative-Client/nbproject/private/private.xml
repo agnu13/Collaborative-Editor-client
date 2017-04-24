@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/ui/fxml/IDE.fxml</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/codeEditor/buffer/Buffer.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/authenticate/exception/IncorrectPasswordException.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/codeEditor/operation/userOperations/InsertOperation.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/config/ConfigFilePaths.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/utility/Request.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/config/Debug.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/nbproject/jfx-impl.xml</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/compile/Compiler.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/authenticate/entities/User.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/codeEditor/Test.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/codeEditor/buffer/SynchronizedBuffer.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/ui/Main.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/config/NetworkConfig.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/authenticate/entities/LoginInfo.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/utility/SendPostRequest.java</file>
+            <file>file:/C:/Users/Agnu/Desktop/CollabIDE-Client/src/codeEditor/operation/userOperations/RepositionOperation.java</file>
+        </group>
+    </open-files>
+</project-private>

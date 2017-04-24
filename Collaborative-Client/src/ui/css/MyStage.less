@@ -1,0 +1,101 @@
+@titleBarColor: transparent;
+
+.parent {
+    -fx-background-color: transparent;
+}
+
+.titleBar {
+    -fx-background-color: @titleBarColor;
+}
+
+.content-holder {
+    -fx-background-color: white;
+}
+
+.root-style {
+    -fx-background-color: white;
+}
+
+@titlebar-button-color-text-fill-black: rgba(0, 0, 0, 0.5);
+@titlebar-button-color-text-fill-hover-black: rgba(0, 0, 0, 0.8);
+@titlebar-button-color-hover-black: rgba(0, 0, 0, 0.1);
+
+
+@titlebar-button-color-text-fill: rgba(255, 255, 255, 0.8);
+@titlebar-button-color-text-fill-hover: white;
+@titlebar-button-color-hover: rgba(255, 255, 255, 0.2);
+@titlebar-close-button-color-hover: #E04343;
+
+.title-button-white {
+    -fx-background-color: transparent;
+    -fx-text-fill: @titlebar-button-color-text-fill;
+    
+    &:hover {
+        -fx-background-color: @titlebar-button-color-hover;
+        -fx-text-fill: @titlebar-button-color-text-fill-hover;
+    }
+    
+    &:pressed {
+        -fx-background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.close-button-white {
+    -fx-background-color: transparent;
+    -fx-text-fill: @titlebar-button-color-text-fill;
+    
+    &:hover {
+        -fx-background-color: @titlebar-close-button-color-hover;
+        -fx-text-fill: white;
+    }
+    
+    &:pressed {
+        -fx-background-color: darken(@titlebar-close-button-color-hover, 10%);
+    }
+}
+
+.title-button-black {
+    -fx-background-color: transparent;
+    -fx-text-fill: @titlebar-button-color-text-fill-black;
+    
+    &:hover {
+        -fx-background-color: @titlebar-button-color-hover-black;
+        -fx-text-fill: @titlebar-button-color-text-fill-hover-black;
+    }
+    
+    &:pressed {
+        -fx-background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.close-button-black {
+    -fx-background-color: transparent;
+    -fx-text-fill: @titlebar-button-color-text-fill-black;
+    
+    &:hover {
+        -fx-background-color: @titlebar-close-button-color-hover;
+        -fx-text-fill: white;
+    }
+    
+    &:pressed {
+        -fx-background-color: darken(@titlebar-close-button-color-hover, 10%);
+    }
+}
+
+.hamburger {
+    -fx-background-image: url("images/hamburger1.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    
+    &:hover {
+        -fx-background-color: @titlebar-button-color-hover;
+    }
+    
+    &:pressed {
+        -fx-background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.maximize {
+    //-fx-border-color: rgb(175, 175, 175);
+}

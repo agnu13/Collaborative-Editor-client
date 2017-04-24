@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="456.0" prefWidth="759.0" styleClass="rootParent" stylesheets="@../css/IDEStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.IDEController">
+   <children>
+      <AnchorPane prefHeight="67.0" prefWidth="759.0" styleClass="top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <SplitPane dividerPositions="0.3353096179183136" layoutY="28.0" prefHeight="428.0" prefWidth="759.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <items>
+          <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="200.0" prefHeight="160.0" prefWidth="290.0">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="456.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="453.0" prefWidth="226.0">
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="83.0" fitWidth="145.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../css/images/noproject.PNG" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <TreeView fx:id="treeView" layoutX="3.0" prefHeight="386.0" prefWidth="254.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                              <AnchorPane prefHeight="44.0" prefWidth="97.0" styleClass="tool-bar2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="newProjectLabel" alignment="CENTER" layoutX="14.0" layoutY="-8.0" onMouseClicked="#newProjectLabelClicked" prefHeight="43.0" prefWidth="41.0" styleClass="tool" text="+" textAlignment="CENTER" textFill="#000000b0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Label fx:id="hamburger" layoutX="13.0" layoutY="-3.0" onMouseClicked="#hamburgerClicked" prefHeight="35.0" prefWidth="35.0" styleClass="hamburger" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                  <Label alignment="CENTER" layoutX="47.0" layoutY="2.0" prefHeight="35.0" prefWidth="55.0" styleClass="project-label" text="Projects" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane layoutY="37.0" prefHeight="44.0" prefWidth="504.0" styleClass="tool-bar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
+                  <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="246.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../css/images/nofile.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <TabPane fx:id="tabPane" prefHeight="420.0" prefWidth="504.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

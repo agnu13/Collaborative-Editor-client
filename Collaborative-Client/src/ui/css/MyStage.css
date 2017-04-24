@@ -1,0 +1,67 @@
+.parent {
+  -fx-background-color: transparent;
+}
+.titleBar {
+  -fx-background-color: transparent;
+}
+.content-holder {
+  -fx-background-color: white;
+}
+.root-style {
+  -fx-background-color: white;
+}
+.title-button-white {
+  -fx-background-color: transparent;
+  -fx-text-fill: rgba(255, 255, 255, 0.8);
+}
+.title-button-white:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.2);
+  -fx-text-fill: #ffffff;
+}
+.title-button-white:pressed {
+  -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+.close-button-white {
+  -fx-background-color: transparent;
+  -fx-text-fill: rgba(255, 255, 255, 0.8);
+}
+.close-button-white:hover {
+  -fx-background-color: #e04343;
+  -fx-text-fill: white;
+}
+.close-button-white:pressed {
+  -fx-background-color: #ce2222;
+}
+.title-button-black {
+  -fx-background-color: transparent;
+  -fx-text-fill: rgba(0, 0, 0, 0.5);
+}
+.title-button-black:hover {
+  -fx-background-color: rgba(0, 0, 0, 0.1);
+  -fx-text-fill: rgba(0, 0, 0, 0.8);
+}
+.title-button-black:pressed {
+  -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+.close-button-black {
+  -fx-background-color: transparent;
+  -fx-text-fill: rgba(0, 0, 0, 0.5);
+}
+.close-button-black:hover {
+  -fx-background-color: #e04343;
+  -fx-text-fill: white;
+}
+.close-button-black:pressed {
+  -fx-background-color: #ce2222;
+}
+.hamburger {
+  -fx-background-image: url("images/hamburger1.png");
+  -fx-background-position: center center;
+  -fx-background-repeat: no-repeat;
+}
+.hamburger:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+.hamburger:pressed {
+  -fx-background-color: rgba(0, 0, 0, 0.2);
+}
