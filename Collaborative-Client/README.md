@@ -11,7 +11,7 @@ While working on large development projects, all software developers eventually 
 A real time collaborative integrated development environment can provide developers with the facility to collaborate over software projects over a network even when developers are thousand of miles away. Real-time Collaborative IDE provide developers with the ability to collaboratively write code, build and test it as well as share their projects with other developers. Chatting with other fellow developers over a project is also possible. Besides several other useful features of a complete IDE including saving snapshots, project management are also provided to ease the entire project development process.
 
 ### Developed by:
-Akash Sharan , Mayur kumar Samad , sIBHI Rajan
+Akash Sharan , Mayur kumar Samad , Sibhi Rajan
 
 ## Version: 1.0
 
@@ -55,7 +55,4 @@ CollabIDE are already present in ./libs. Add them if needed.
 
 Introduce changes, add features, fix bugs and send a pull request to contribute. 
 
-## Who do I talk to?
-
-#### For any queries contact at:
 
