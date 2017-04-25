@@ -18,16 +18,15 @@ Akash Sharan , Mayur kumar Samad , Sibhi Rajan
 ### How does it look like
 
 The IDE looks like this. Its always easy to write code and share it with other developers. 
-![Alt text](/./screenshots/screenshot1.jpg?raw=true "ScreenShot1")
 
 All settings are available on hamburger menu to the left. Enable/Disable active cursors, notifications as per your need. 
-![Alt text](/./screenshots/screenshot2.jpg?raw=true "ScreenShot2")
+
 
 You can browse your projects like this. Shared ones too.
-![Alt text](/./screenshots/screenshot3.jpg?raw=true "ScreenShot3")
+
 
 You can also share your projects with fellow developers !!! Its always easy to collaborate.
-![Alt text](/./screenshots/screenshot4.JPG?raw=true "ScreenShot4")
+
 
  
 ### Setting up the Client  
